@@ -1,0 +1,41 @@
+# Not change this please.
+formatVersion: 2
+# Is developer mode. Not recommended to enable.
+debug: false
+# Enter here Discord bot token.
+# How to create bot see in Google
+discord_bot_token: Enter discord bot token here
+# Limit for nicks on one discord account
+max_accounts_on_discord: 1
+# LimdoAPI server name
+auth_server_name: SnowLimboDiscordAuth
+# SURVIVAL, CREATIVE, ADVENTURE, SPECTATOR
+# All in UPPER CASE
+auth_player_gamemode: SPECTATOR
+# Player spawned in this position
+auth_player_position:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+auth_world_dimension: THE_END
+# Time in world in ticks.
+# See /time set <ticks>
+auth_world_time: 0
+# Time to authorization
+auth_session_active_time_millis: 50000
+# Time to player have reconnect after disconnect without authorization (by saved IP-Address)
+saved_session_active_time_millis: 60000
+# Minimum of random code generator
+code_min: 1000
+# Maximum of random code generator
+code_max: 9999
+# The maximum number of iterations of code regeneration,
+# after which `code_advanced_coefficient` will be added to CODE_MAX every iteration
+code_advanced_max_iterations: 10
+code_advanced_coefficient: 500
+# Confirms words in chat for allow link account
+registration_confirms: ["confirm","yes"]
+# Custom variables in messages.jconf
+custom_variables:
