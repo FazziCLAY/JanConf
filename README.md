@@ -1,0 +1,2 @@
+# JanConf
+Simple configs
