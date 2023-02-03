@@ -1,0 +1,5 @@
+name: JanConfLib
+version: 1.4.1
+main: com.fazziclay.janconf.bukkit.Plugin
+author: FazziCLAY
+api-version: 1.13
