@@ -1,7 +1,7 @@
 package com.fazziclay.janconf.test;
 
 import com.fazziclay.janconf.JanConf;
-import ru.fazziclay.javaneoutil.FileUtil;
+import com.fazziclay.javaneoutil.FileUtil;
 
 import java.io.File;
 

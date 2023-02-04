@@ -9,6 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="JavaNeoUtil-1.0" level="project" />
-    <orderEntry type="library" name="spigot-1.16.5" level="project" />
+    <orderEntry type="library" name="FakeBukkitApi-jdk11-version1" level="project" />
+    <orderEntry type="library" name="JavaNeoUtil-1.1" level="project" />
   </component>
 </module>

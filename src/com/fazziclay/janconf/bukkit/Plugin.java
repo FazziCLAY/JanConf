@@ -5,6 +5,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Plugin extends JavaPlugin {
     @Override
     public void onEnable() {
-        getLogger().info("JanConf library loaded!");
+        getLogger().info("JanConf loaded as bukkit-plugin.");
     }
 }
