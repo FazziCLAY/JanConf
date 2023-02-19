@@ -30,7 +30,8 @@ import java.util.*;
  * </pre>
  */
 public class JanConf {
-    public static final String VERSION_NAME = "1.4.2";
+    public static final String VERSION_NAME = "1.4.3";
+    public static final int VERSION_BUILD = 102;
 
     private final LinkedHashMap<String, CommentableObject> values = new LinkedHashMap<>();
 
@@ -188,6 +189,13 @@ public class JanConf {
             return (JanConf) values.get(key).value;
         }
         return def;
+    }
+
+    public JanConf getGroupSafe(String key) {
+        if (values.containsKey(key)) {
+            return (JanConf) values.get(key).value;
+        }
+        return new JanConf();
     }
 
     public boolean has(String key) {

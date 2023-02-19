@@ -6,8 +6,10 @@ import com.fazziclay.javaneoutil.FileUtil;
 import java.io.File;
 
 public class TestJanConf {
+    private final static File TEST = new File("test");
+
     public static void main(String[] args) {
-        File file = new File("config.jconf");
+        File file = new File(TEST, "config.jconf");
 
         JanConf jconf = new JanConf(FileUtil.getText(file, ""));
 
@@ -16,6 +18,6 @@ public class TestJanConf {
         System.out.println(jconf.toString(2));
         System.out.println(jconf.type("custom_variables"));
 
-        FileUtil.setText(new File("out_config.jconf"), jconf.toString(2));
+        FileUtil.setText(new File(TEST, "out_config.jconf"), jconf.toString(2));
     }
 }
