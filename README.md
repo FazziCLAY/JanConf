@@ -60,7 +60,7 @@ conf.put("key1", "new value 2", "Simple comments!");
 final int INDENT_SPACES = 2;
 System.out.println(conf.toString(INDENT_SPACES));
 // # Simple comments!
-// key1:new value 2
+// key1: new value 2
 // key2: value2
 // volume:1.0
 // auto: true
