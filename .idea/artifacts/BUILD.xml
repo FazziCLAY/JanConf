@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="BUILD">
+    <output-path>$PROJECT_DIR$/out/artifacts/BUILD</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="JanConf-1.4.4-lib" />
+      <element id="artifact" artifact-name="JanConf-1.4.4-sources" />
+    </root>
+  </artifact>
+</component>

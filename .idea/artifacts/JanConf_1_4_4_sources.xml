@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="JanConf-1.4.4-sources">
+    <output-path>$PROJECT_DIR$/out/artifacts/JanConf_1_4_4_sources</output-path>
+    <root id="root">
+      <element id="archive" name="JanConf-1.4.4-sources.jar">
+        <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      </element>
+    </root>
+  </artifact>
+</component>

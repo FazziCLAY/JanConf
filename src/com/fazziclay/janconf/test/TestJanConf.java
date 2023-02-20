@@ -15,9 +15,9 @@ public class TestJanConf {
 
 
         System.out.println("\n\n\n=======================");
-        System.out.println(jconf.toString(2));
+        System.out.println(jconf.toString(1, false));
         System.out.println(jconf.type("custom_variables"));
 
-        FileUtil.setText(new File(TEST, "out_config.jconf"), jconf.toString(2));
+        FileUtil.setText(new File(TEST, "out_config.jconf"), jconf.toString(1, false));
     }
 }

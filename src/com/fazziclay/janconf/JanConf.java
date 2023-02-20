@@ -30,7 +30,7 @@ import java.util.*;
  * </pre>
  */
 public class JanConf {
-    public static final String VERSION_NAME = "1.4.3";
+    public static final String VERSION_NAME = "1.4.4";
     public static final int VERSION_BUILD = 102;
 
     private final LinkedHashMap<String, CommentableObject> values = new LinkedHashMap<>();
@@ -220,12 +220,16 @@ public class JanConf {
 
     @Override
     public String toString() {
-        return toString(2);
+        return toString(2, true);
     }
 
     public String toString(int indentSpaces) {
+        return toString(2, true);
+    }
+
+    public String toString(int indentSpaces, boolean valueSpace) {
         try {
-            return write(indentSpaces);
+            return write(indentSpaces, valueSpace);
         } catch (Exception e) {
             throw new JanException("Failed export JanConf.", e);
         }
@@ -257,15 +261,14 @@ public class JanConf {
         }
     }
 
-    private String write(int indentSpaces) {
+    private String write(int indentSpaces, boolean valueSpace) {
         if (indentSpaces < 1) {
             throw new RuntimeException("Minimum 1 indentSpaces.");
         }
         StringBuilder s = new StringBuilder();
 
-        char[] fullSpacesArray = new char[indentSpaces];
-        Arrays.fill(fullSpacesArray, ' ');
-        String indentSpacesValue = new String(fullSpacesArray);
+        String indentSpacesValue = multiplyChar(' ', indentSpaces);
+        String firstValSpacesValue = valueSpace ? " " : "";
 
         values.forEach((key, val) -> {
             if (val.comment != null) {
@@ -275,10 +278,10 @@ public class JanConf {
                 }
             }
             if (val.value instanceof String) {
-                s.append(key).append(": ").append(val.value);
+                s.append(key).append(":").append(firstValSpacesValue).append(val.value);
 
             } else if (val.value instanceof JanConf) {
-                String[] jan = ((JanConf)val.value).toString(indentSpaces).split("\n");
+                String[] jan = ((JanConf)val.value).toString(indentSpaces, valueSpace).split("\n");
                 s.append(key).append(":");
                 for (String s1 : jan) {
                     s.append("\n").append(indentSpacesValue).append(s1);
@@ -288,6 +291,13 @@ public class JanConf {
         });
 
         return s.toString().trim();
+    }
+
+    private String multiplyChar(char c, int count) {
+        if (count == 0) return "";
+        char[] fullSpacesArray = new char[count];
+        Arrays.fill(fullSpacesArray, c);
+        return new String(fullSpacesArray);
     }
 
     private void parse(String[] lines) {
