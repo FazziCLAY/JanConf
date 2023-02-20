@@ -31,7 +31,7 @@ import java.util.*;
  */
 public class JanConf {
     public static final String VERSION_NAME = "1.4.4";
-    public static final int VERSION_BUILD = 102;
+    public static final int VERSION_BUILD = 103;
 
     private final LinkedHashMap<String, CommentableObject> values = new LinkedHashMap<>();
 
